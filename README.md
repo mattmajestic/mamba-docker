@@ -4,7 +4,15 @@ Run Jupyter Notebook with Mamba in a Docker container.
 
 ## DockerHub Images
 
+`docker pull mattmajestic/mamba-ubuntu` from Terminal
+
+Visit Docker Image Below:
+
 [![Docker Image](https://img.shields.io/docker/v/mattmajestic/mamba-ubuntu?color=blue&label=mattmajestic/mamba-ubuntu&logo=docker&logoColor=white&style=for-the-badge)](https://hub.docker.com/r/mattmajestic/mamba-ubuntu)
+
+`docker pull mattmajestic/mamba-conda` from Terminal
+
+Visit Docker Image Below:
 
 [![Docker Image](https://img.shields.io/docker/v/mattmajestic/mamba-conda?color=blue&label=mattmajestic/mamba-conda&logo=docker&logoColor=white&style=for-the-badge)](https://hub.docker.com/r/mattmajestic/mamba-conda)
 
@@ -18,4 +26,4 @@ Run Jupyter Notebook with Mamba in a Docker container.
 
 ## Customization:
 
-- Modify the `Dockerfile` and `docker-compose.yml` to customize your environment.
+- Modify the `Dockerfile.ubuntu`/`Dockerfile.conda` and `docker-compose.yml` to customize your environment.
