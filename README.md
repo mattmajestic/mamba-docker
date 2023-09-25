@@ -8,7 +8,7 @@ Run Jupyter Notebook with Mamba in a Docker container.
 
 [![Docker Image](https://img.shields.io/docker/v/mattmajestic/mamba-conda?color=blue&label=mattmajestic/mamba-conda&logo=docker&logoColor=white&style=for-the-badge)](https://hub.docker.com/r/mattmajestic/mamba-conda)
 
-##Getting Started:
+## Getting Started:
 
 1. Clone the repository: `git clone https://github.com/your-username/mamba-docker.git`
 
