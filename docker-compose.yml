@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  mamba-jupyter:
+  mamba-ubuntu:
     build:
       context: .
       dockerfile: Dockerfile.ubuntu
