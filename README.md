@@ -1,6 +1,6 @@
 # Mamba Docker 🐍🐋
 
-Run Jupyter Notebook with Mamba in a Docker container.
+Run Jupyter Notebook with Docker in a Docker container from `Ubuntu or Conda`.
 
 ## DockerHub Images
 
