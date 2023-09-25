@@ -1,4 +1,4 @@
-name: Publish Docker Image to Docker Hub
+name: Publish Images to DockerHub
 
 on:
   push:
@@ -10,22 +10,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout mamba-docker
         uses: actions/checkout@v2
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
-      - name: Login to Docker Hub
+      - name: Docker Hub Login
         run: |
           echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u mattmajestic --password-stdin
 
-      - name: Build and Push to Docker Hub
+      - name: Ubuntu ~ Build and Push 
         run: |
           docker buildx create --use
           docker buildx build -t mattmajestic/mamba-ubuntu:latest -f Dockerfile.ubuntu . --push
 
-      - name: Build Dockerfile.conda and Push to Docker Hub
+      - name: Conda ~ Build and Push 
         run: |
           docker buildx create --use
           docker buildx build -t mattmajestic/mamba-conda:latest -f Dockerfile.conda . --push
