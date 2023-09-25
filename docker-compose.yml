@@ -15,7 +15,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.conda
+    ports:
+      - "8889:8888"
     volumes:
       - ./data-science.yml:/app/data-science.yml 
     environment:
-      - MY_ENV_VAR=some_value 
+      - JUPYTER_TOKEN=mobamba
