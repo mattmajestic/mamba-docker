@@ -11,11 +11,11 @@ services:
     environment:
       - JUPYTER_TOKEN=mobamba
 
-  miniconda-env:
+  mamba-conda:
     build:
       context: .
-      dockerfile: Dockerfile.miniconda
+      dockerfile: Dockerfile.conda
     volumes:
-      - ./data-science.yml:/app/data-science.yml  # Mount the data-science.yml file
+      - ./data-science.yml:/app/data-science.yml 
     environment:
-      - MY_ENV_VAR=some_value  # Set environment variables as needed
+      - MY_ENV_VAR=some_value 

@@ -14,7 +14,7 @@ RUN conda install -y conda-libmamba-solver
 RUN conda install -y jupyter
 
 # Copy the data-science.yml file into the container
-COPY data-science.yml /app/data-science.yml  # Adjust the path as needed
+COPY data-science.yml /app/data-science.yml 
 
 # Create a Conda environment from the data-science.yml file
 RUN conda env create -f /app/data-science.yml
