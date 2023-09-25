@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  mamba-jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile.ubuntu
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/app/notebooks
+    environment:
+      - JUPYTER_TOKEN=mobamba
+
+  miniconda-env:
+    build:
+      context: .
+      dockerfile: Dockerfile.miniconda
+    volumes:
+      - ./data-science.yml:/app/data-science.yml  # Mount the data-science.yml file
+    environment:
+      - MY_ENV_VAR=some_value  # Set environment variables as needed

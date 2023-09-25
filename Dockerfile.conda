@@ -1,0 +1,29 @@
+# Use the official Miniconda base image
+FROM continuumio/miniconda3
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Configure conda to use the conda-forge channel
+RUN conda config --add channels conda-forge
+
+# Install Mamba (an alternative conda package manager)
+RUN conda install -y conda-libmamba-solver
+
+# Install Jupyter Notebook
+RUN conda install -y jupyter
+
+# Copy the data-science.yml file into the container
+COPY data-science.yml /app/data-science.yml  # Adjust the path as needed
+
+# Create a Conda environment from the data-science.yml file
+RUN conda env create -f /app/data-science.yml
+
+# Activate the environment by default when starting the container
+RUN echo "conda activate myenv" >> ~/.bashrc
+
+# Expose Jupyter Notebook port
+EXPOSE 8888
+
+# Start Jupyter Notebook when the container runs
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
