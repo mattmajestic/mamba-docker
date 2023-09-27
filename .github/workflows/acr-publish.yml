@@ -21,12 +21,12 @@ jobs:
           username: ${{ secrets.ACR_USERNAME }}
           password: ${{ secrets.ACR_PASSWORD }}
 
-      - name: Build and Push to Azure Container Registry
+      - name: Build and Push Conda Docker Image
         run: |
-          docker build -t majesticcoding.azurecr.io/mamba-conda:latest Dockerfile.conda .
+          docker build -t majesticcoding.azurecr.io/mamba-conda:latest -f Dockerfile.conda .
           docker push majesticcoding.azurecr.io/mamba-conda:latest
 
-      - name: Build and Push to Azure Container Registry
+      - name: Build and Push Ubuntu Docker Image
         run: |
-          docker build -t majesticcoding.azurecr.io/mamba-ubuntu:latest Dockerfile.ubuntu .
+          docker build -t majesticcoding.azurecr.io/mamba-ubuntu:latest -f Dockerfile.ubuntu .
           docker push majesticcoding.azurecr.io/mamba-ubuntu:latest
