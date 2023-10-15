@@ -27,3 +27,11 @@ Visit Docker Image Below:
 ## Customization:
 
 - Modify the `Dockerfile.ubuntu`/`Dockerfile.conda` and `docker-compose.yml` to customize your environment.
+
+## Subscribe and Stay Tuned! 🎉
+
+Join our YouTube channel for more tech tutorials and quick hacks!
+
+[![Subscribe to Our YouTube Channel](https://img.shields.io/badge/Subscribe-OurChannel-red)](https://www.youtube.com/@majesticcoding)
+
+Like, share, and subscribe to support the channel and stay updated with more exciting content. Enjoy your coding adventures! 🚀
